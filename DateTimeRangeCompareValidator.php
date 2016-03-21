@@ -178,7 +178,7 @@ class DateTimeRangeCompareValidator extends Validator
      */
     public function clientValidateAttribute($model, $attribute, $view)
     {
-        DateTimeRangesCompareValidatorAsset::register($view);
+        DateTimeRangeCompareValidatorAsset::register($view);
 
         $jsOptions['operator'] = $this->operator;
         $jsOptions['format'] = $this->jsFormat;
@@ -188,9 +188,8 @@ class DateTimeRangeCompareValidator extends Validator
             $compareValue = $model->getAttributeLabel($compareAttribute);
             $jsOptions['compareAttribute'] = Html::getInputId($model, $compareAttribute);
         } else {
-             $compareValue = $this->compareValue;
+            $compareValue = $this->compareValue;
             $jsOptions['compareValue'] = $compareValue;
-            $compareLabel = $compareValueOrAttribute = $model->getAttributeLabel($compareAttribute);
         }
 
         if ($this->skipOnEmpty) {
@@ -206,7 +205,6 @@ class DateTimeRangeCompareValidator extends Validator
             'attribute' => $model->getAttributeLabel($attribute),
             'compareAttribute' => $compareValue,
             'compareValue' => $compareValue,
-            'compareValueOrAttribute' => $compareValueOrAttribute,
         ], Yii::$app->language);
         
         return 'yii.validation.datetimerangecompare(value, messages, ' . json_encode($jsOptions, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . ');'; 

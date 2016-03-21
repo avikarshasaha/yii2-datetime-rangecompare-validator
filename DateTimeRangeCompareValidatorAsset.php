@@ -8,7 +8,7 @@ class DateTimeRangeCompareValidatorAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vendor/avikarsha/yii2-datetime-rangecompare-validator/src/assets';
+    public $sourcePath = '@vendor/avikarsha/yii2-datetime-rangecompare-validator/assets';
     
     /**
      * @inheritdoc
