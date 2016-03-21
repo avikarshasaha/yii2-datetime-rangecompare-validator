@@ -1,0 +1,22 @@
+{
+    "name": "avikarsha/yii2-datetime-rangecompare-validator",
+    "description": "Datetime Rangecompare Validator",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "avikarsha saha",
+            "email": "avikarsha.saha@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/moment": "~2.12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "avikarsha\\validators\\": ""
+        }
+    }
+}
