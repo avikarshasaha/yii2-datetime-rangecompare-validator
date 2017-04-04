@@ -102,7 +102,8 @@ class DateTimeRangeCompareValidator extends Validator
         if ($this->skipOnEmpty && $this->isEmpty($value)) {
             return null;
         }
-
+        $this->compareValue = $value;
+        
         if ($this->compareValue === null) {
             $compareAttribute = $this->compareAttribute;
             $compareValue = $model->$compareAttribute;
