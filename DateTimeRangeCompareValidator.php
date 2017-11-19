@@ -103,6 +103,7 @@ class DateTimeRangeCompareValidator extends Validator
             return null;
         }
 
+        /* added to handle "Invalid compare value date format" error on empty compare Attribute  */
         if ($this->skipOnEmpty && !empty($value) && empty($model[$this->compareAttribute])) {
             return null;
         }
